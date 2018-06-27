@@ -4,8 +4,8 @@ import argparse
 """
 图片转字符画
 运行方式：
-transform.py wm.png -o output.txt --> 输出图片的字符画为文件
-transform.py wm.png -o output.txt --width 80 --height 60  --> 指定输出字符画的宽度和高度
+image_to_ascii.py wm.png -o output.txt --> 输出图片的字符画为文件
+image_to_ascii.py wm.png -o output.txt --width 80 --height 60  --> 指定输出字符画的宽度和高度
 """
 
 # 输入参数解析
