@@ -160,13 +160,11 @@ class GameField(object):
 
         def draw_hor_separator():
             line = '+' + ('+------' * self.width + '+')[1:]
-            separator = defaultdict(lambda: line)
-            if not hasattr(draw_hor_separator, 'counter'):
-                draw_hor_separator.counter = 0
-            cast(separator[draw_hor_separator.counter])
-            draw_hor_separator.counter += 1
+            cast(line)
 
         def draw_row(row):
+            # {: ^5}  :后面的空格表示使用空格填充 ^表示居中对齐 5表示总长度为5，左对齐使用< 右对齐使用>
+            # '{: ^5}'.format(23) 输出 ' 23  '
             cast(''.join('|{: ^5} '.format(num) if num > 0 else '|      ' for num in row) + '|')
 
         screen.clear()
