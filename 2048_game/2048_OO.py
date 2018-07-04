@@ -235,6 +235,7 @@ class GameManager(object):
     @property
     def is_win(self):
         # 判断胜利：棋盘中存在数值大于等于目标分的格子
+        # chain 把一组迭代器串联成一个更大的迭代器
         self.win = max(chain(*self.grid.cells)) >= self.win_num
         return self.win
 
